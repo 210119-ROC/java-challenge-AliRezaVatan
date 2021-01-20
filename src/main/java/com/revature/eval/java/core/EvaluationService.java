@@ -21,9 +21,19 @@ public class EvaluationService {
 	static class SpeedConverter {
 
 		public static long toMilesPerHour(double kilometersPerHour) {
-			// TODO Write an implementation for this method declaration
-			return 0;
+			
+			// This Constant is used to convert Kilometers to Miles
+			// Mile is equal to KilometersPerHour*0.621371;
+			
+			final double FACT=0.621371;
+			long returnValue=-1L;
+			
+			if (kilometersPerHour>=0) {
+				returnValue=Math.round(kilometersPerHour*FACT);
+			}
+			return returnValue;
 		}
+			
 
 		/**
 		 * 1.B Speed Converter - Print Conversion
@@ -44,7 +54,7 @@ public class EvaluationService {
 			// TODO Write an implementation for this method declaration
 			return null;
 		}
-	}
+	
 
 	/**
 	 * 2. MegaBytes and KiloBytes
@@ -478,5 +488,6 @@ public class EvaluationService {
 	
 	public int guessingGame(int x, int y) {
 		return 0;
+	}
 	}
 }
